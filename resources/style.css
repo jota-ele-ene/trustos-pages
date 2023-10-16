@@ -1,0 +1,32 @@
+body
+{
+  margin: 0;
+    overflow-x: hidden;
+    background-color: var(--azul-oscuro)!important;
+}
+
+.trustos-logo {
+    margin: 40px 0 20px 100px;
+    width: 160px !important;
+    height: auto;
+}
+
+.second-line {
+    background-color: white;
+    padding-top: 40px;
+    height: 160px;
+  }
+
+@media (max-width: 959px)
+{
+  .trustos-logo {
+      margin: 10px;
+      width: 90px !important;
+      height: auto;
+  }
+
+  .second-line {
+      padding-top: 40px;
+      height: 90px;
+    }
+}

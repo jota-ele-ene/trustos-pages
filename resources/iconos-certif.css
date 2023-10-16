@@ -1,0 +1,330 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "blockchain-certif";
+  src:url("blockchain-certif.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "blockchain-certif" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="tel-"]:before,
+[class*=" tel-"]:before {
+  font-family: "blockchain-certif" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tel-angle-left:before {
+  content: "\6d";
+}
+.tel-angle-down:before {
+  content: "\72";
+}
+.tel-facebook:before {
+  content: "\7a";
+}
+.tel-linkedin:before {
+  content: "\41";
+}
+.tel-twitter-alt:before {
+  content: "\42";
+}
+.tel-youtube-alt:before {
+  content: "\43";
+}
+.tel-angle-right:before {
+  content: "\66";
+}
+.tel-checkmark:before {
+  content: "\48";
+}
+.tel-check:before {
+  content: "\49";
+}
+.tel-check-mark:before {
+  content: "\4a";
+}
+.tel-twitter:before {
+  content: "\4e";
+}
+.tel-linkedin-1:before {
+  content: "\4f";
+}
+.tel-stop:before {
+  content: "\50";
+}
+.tel-up-dir:before {
+  content: "\5a";
+}
+.tel-down-dir:before {
+  content: "\30";
+}
+.tel-bookmark-1:before {
+  content: "\31";
+}
+.tel-bookmark:before {
+  content: "\6a";
+}
+.tel-circle:before {
+  content: "\6e";
+}
+.tel-flag:before {
+  content: "\6f";
+}
+.tel-hyperledger-contour:before {
+  content: "\70";
+}
+.tel-ico-api-settle:before {
+  content: "\71";
+}
+.tel-ico-api-token:before {
+  content: "\74";
+}
+.tel-ico-api-track:before {
+  content: "\75";
+}
+.tel-ico-api-trust:before {
+  content: "\76";
+}
+.tel-ico-aura:before {
+  content: "\77";
+}
+.tel-ico-blockchain-consenso:before {
+  content: "\51";
+}
+.tel-ico-blockchain-inmutabilidad:before {
+  content: "\52";
+}
+.tel-ico-blockchain-seguridad:before {
+  content: "\59";
+}
+.tel-ico-blockchain-transparencia:before {
+  content: "\32";
+}
+.tel-ico-buscar:before {
+  content: "\61";
+}
+.tel-ico-casos-exito:before {
+  content: "\63";
+}
+.tel-ico-casos-uso:before {
+  content: "\65";
+}
+.tel-ico-category:before {
+  content: "\67";
+}
+.tel-ico-cerrar:before {
+  content: "\68";
+}
+.tel-ico-check:before {
+  content: "\6b";
+}
+.tel-ico-end-to-end:before {
+  content: "\6c";
+}
+.tel-ico-link-testimonio:before {
+  content: "\78";
+}
+.tel-ico-ok:before {
+  content: "\46";
+}
+.tel-ico-play-video:before {
+  content: "\47";
+}
+.tel-ico-quote:before {
+  content: "\4c";
+}
+.tel-ico-quote-1:before {
+  content: "\33";
+}
+.tel-ico-quote-alt:before {
+  content: "\62";
+}
+.tel-ico-simplicidad:before {
+  content: "\64";
+}
+.tel-ico-simplicidad-1:before {
+  content: "\69";
+}
+.tel-ico-solicita-demo:before {
+  content: "\44";
+}
+.tel-ico-tags:before {
+  content: "\45";
+}
+.tel-ico-trustos:before {
+  content: "\4b";
+}
+.tel-instagram:before {
+  content: "\4d";
+}
+.tel-logo-top-movistar:before {
+  content: "\53";
+}
+.tel-logo-top-o2:before {
+  content: "\54";
+}
+.tel-logo-top-telefonica:before {
+  content: "\55";
+}
+.tel-logo-top-vivo:before {
+  content: "\56";
+}
+.tel-play-button:before {
+  content: "\57";
+}
+.tel-ico-calendario:before {
+  content: "\79";
+}
+.tel-ico-mas:before {
+  content: "\58";
+}
+.tel-ico-papelera:before {
+  content: "\35";
+}
+.tel-ico-cerfificado:before {
+  content: "\36";
+}
+.tel-ico-crear-certif:before {
+  content: "\37";
+}
+.tel-ico-documento:before {
+  content: "\38";
+}
+.tel-ico-lapiz:before {
+  content: "\39";
+}
+.tel-ico-arrastre-aqui:before {
+  content: "\21";
+}
+.tel-ico-carpeta:before {
+  content: "\22";
+}
+.tel-ico-carpeta-rellena:before {
+  content: "\23";
+}
+.tel-checkmark-round:before {
+  content: "\24";
+}
+.tel-clock-o:before {
+  content: "\25";
+}
+.tel-clock:before {
+  content: "\26";
+}
+.tel-close-round:before {
+  content: "\27";
+}
+.tel-ico-grupos:before {
+  content: "\34";
+}
+.tel-ico-invitar:before {
+  content: "\28";
+}
+.tel-ico-nuevo-certif:before {
+  content: "\29";
+}
+.tel-ico-next:before {
+  content: "\2a";
+}
+.tel-ico-prev:before {
+  content: "\2b";
+}
+.tel-ico-usuario:before {
+  content: "\2c";
+}
+.tel-ios-gear:before {
+  content: "\2d";
+}
+.tel-ios-gear-outline:before {
+  content: "\2e";
+}
+.tel-navicon:before {
+  content: "\2f";
+}
+.tel-ico-historial:before {
+  content: "\3b";
+}
+.tel-ico-link:before {
+  content: "\3c";
+}
+.tel-ico-pluma:before {
+  content: "\3d";
+}
+.tel-ico-recordatorio:before {
+  content: "\3e";
+}
+.tel-ico-download:before {
+  content: "\3a";
+}
+.tel-ico-introduce-pass:before {
+  content: "\40";
+}
+.tel-ico-documento-json:before {
+  content: "\5b";
+}
+.tel-ico-documento-pdf:before {
+  content: "\5d";
+}
+.tel-code:before {
+  content: "\5e";
+}
+.tel-camera:before {
+  content: "\5f";
+}
+.tel-angle-up:before {
+  content: "\73";
+}
+.tel-ico-info:before {
+  content: "\3f";
+}
+.tel-ico-menu-contactos:before {
+  content: "\60";
+}
+.tel-ico-menu-mis-certif:before {
+  content: "\7b";
+}
+.tel-ico-menu-verificar:before {
+  content: "\7c";
+}
+.tel-clone:before {
+  content: "\7d";
+}
+.tel-twitch:before {
+  content: "\7e";
+}
+.tel-comment:before {
+  content: "\5c";
+}
+.tel-ico-firmante:before {
+  content: "\e000";
+}
+.tel-ico-red-blockchain:before {
+  content: "\e001";
+}
+.tel-ico-invitar-receive:before {
+  content: "\e002";
+}
+.tel-ico-invitar-send:before {
+  content: "\e003";
+}

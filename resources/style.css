@@ -17,6 +17,15 @@ body
     height: 160px;
   }
 
+  ::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+
+  ::-ms-input-placeholder { /* Edge 12-18 */
+    color: red;
+  }
+
 @media (max-width: 959px)
 {
   .trustos-logo {

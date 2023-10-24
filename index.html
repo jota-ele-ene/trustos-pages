@@ -49,7 +49,7 @@
     							<div class="form-row">
     								<input type="hidden" name="hash" id="hash" value="">
     								<input type="hidden" name="hash2" id="hash2" value="">
-    								<input class="verificar" type="text" name="verificar" id="verificar" placeholder="Dinos la URL de la página que quieres verificar" data-ddg-inputtype="unknown">
+                    <input class="verificar" type="text" name="verificar" id="verificar1" onfocus="this.value = ''" onblur="this.value = 'Dinos la URL de la página que quieres verificar'">
     								<button type="submit" class="button celeste transition btn-verificar" id="btn_submit">VERIFICAR</button>
     							</div>
     						</div>
@@ -116,11 +116,11 @@
     const init = () => {
 
       const form = document.getElementById('verificar-form')
-      const url = document.getElementById('verificar')
+      const url = document.getElementById('verificar1')
       const button = document.getElementById('btn_submit')
 
       var verificar = querySt("verificar");
-      url.value = verificar ? decodeURIComponent(verificar) : "Dinos la URL de la página que quieres verificar"
+      url.value = verificar == null ? "Dinos la URL de la página que quieres verificar" : decodeURIComponent(verificar)
 
 
 

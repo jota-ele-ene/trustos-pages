@@ -158,10 +158,7 @@
             const firstHash = CryptoJS.SHA256(wordArray);
             const firstHashHex = firstHash.toString(CryptoJS.enc.Hex)
     				console.log("First hash Hex:" + firstHashHex)
-            var words = CryptoJS.enc.Utf8.parse(firstHashHex); // WordArray object
-            var firstHashBase64 = CryptoJS.enc.Base64.stringify(words); 
-    				console.log("First hash Base 64:" + firstHashBase64)
-            return firstHashBase64
+            return firstHashHex
 
     				// Second hash (WordArray hash)
             //const firstHashWordArray = CryptoJS.enc.Hex.parse(firstHashHex);

@@ -134,6 +134,7 @@
         }
         button.setAttribute('disabled', '')
         try {
+          console.log(feedurl)
           const oembed = await loadFeed(feedurl)
           const content = JSON.stringify(oembed, undefined, '  ')
           console.log(content)

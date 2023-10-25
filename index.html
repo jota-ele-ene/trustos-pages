@@ -156,6 +156,7 @@
     				// First hash (WordArray hash)
             const wordArray = CryptoJS.lib.WordArray.create(content);
             const firstHash = CryptoJS.SHA256(wordArray);
+    				console.log("First hash Hex:" + firstHashHex)
             const firstHashHex = firstHash.toString(CryptoJS.enc.Hex)
     				console.log("First hash Hex:" + firstHashHex)
             return firstHashHex

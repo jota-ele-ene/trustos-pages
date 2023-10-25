@@ -158,15 +158,16 @@
             const firstHash = CryptoJS.SHA256(wordArray);
             const firstHashHex = firstHash.toString(CryptoJS.enc.Hex)
     				console.log("First hash:" + firstHashHex)
+            return firstHashHex
 
     				// Second hash (WordArray hash)
-            const firstHashWordArray = CryptoJS.enc.Hex.parse(firstHashHex);
-            const secondHash = CryptoJS.SHA256(firstHashWordArray);
-    				const secondHashHex = secondHash.toString(CryptoJS.enc.Hex)
-    				console.log("Double hash:" + secondHashHex)
+            //const firstHashWordArray = CryptoJS.enc.Hex.parse(firstHashHex);
+            //const secondHash = CryptoJS.SHA256(firstHashWordArray);
+    				//const secondHashHex = secondHash.toString(CryptoJS.enc.Hex)
+    				//console.log("Double hash:" + secondHashHex)
 
     				// Returns the double hash
-    				return secondHashHex
+    				//return secondHashHex
         } catch (err) {
             console.log(`Error hashing the file content: ${err}`)
             throw err

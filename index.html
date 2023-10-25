@@ -158,7 +158,7 @@
             const firstHash = CryptoJS.SHA256(wordArray);
             const firstHashHex = firstHash.toString(CryptoJS.enc.Hex)
     				console.log("First hash Hex:" + firstHashHex)
-            const firstHashBase64 = Buffer.from(firstHashHex, 'hex').toString('base64');
+            const firstHashBase64 = CryptoJS.enc.Base64.stringify(firstHashHex); 
     				console.log("First hash Base 64:" + firstHashBase64)
             return firstHashBase64
 

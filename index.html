@@ -108,11 +108,12 @@
         descriptionLengthThreshold: 120,
         contentLengthThreshold: 300
       }, {
-        proxy: null
+        proxy: null,
+        'Access-Control-Allow-Origin': '*'
       })
       return Object.assign(Object.create(null), data) // use pure object to hold data
     }
-
+    
     const init = () => {
 
       const form = document.getElementById('verificar-form')

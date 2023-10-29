@@ -1,0 +1,13 @@
+{
+  "name": "TrustOS pages proxy",
+  "description": "Extract article data to get its certificate",
+  "version": "1.0.0",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jota-ele-ene/trustos-pages.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

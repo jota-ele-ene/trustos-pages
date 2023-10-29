@@ -39,7 +39,7 @@
       <!-- Info bar section -->
     	<div class="certif-form-verif_section full-width-content entry-content alignfull">
     		<div class="certif-form-verif_container container">
-    			<form id="verificar-form" class="verificar-form" action="/verificar-certificado/">
+    			<form id="verificar-form1" class="verificar-form" action="/extract">
     				<h1 class="top-line">Comprueba si el contenido de una web está certificado</h1>
             <p style="color: white; font-family: var(--font-light);"><b>TrustOS</b> es la herramienta de certificación de contenido web basada en blockchain. Si una página web fue certificada cuando se publicó, podrás verificar que no ha sido modificada desde entonces. </p>
     				<div class="tabs tabs-home-verificar">
@@ -47,9 +47,7 @@
     					<div id="tabs-content">
     						<div id="tab-id-certificado" class="tab-content" style="">
     							<div class="form-row">
-    								<input type="hidden" name="hash" id="hash" value="">
-    								<input type="hidden" name="hash2" id="hash2" value="">
-                    <input class="verificar" type="text" name="verificar" id="verificar1" placeholder="Dinos la URL que quieres verificar">
+                    <input class="verificar" type="text" name="page" id="verificar1" placeholder="Dinos la URL que quieres verificar">
     								<button type="submit" class="button celeste transition btn-verificar" id="btn_submit">VERIFICAR</button>
     							</div>
     						</div>
@@ -108,15 +106,14 @@
         descriptionLengthThreshold: 120,
         contentLengthThreshold: 300
       }, {
-        proxy: null,
-        'Access-Control-Allow-Origin': '*'
+        proxy: null
       })
       return Object.assign(Object.create(null), data) // use pure object to hold data
     }
-    
+
     const init = () => {
 
-      const form = document.getElementById('verificar-form')
+      const form = document.getElementById('verificar-form1')
       const url = document.getElementById('verificar1')
       const button = document.getElementById('btn_submit')
 
@@ -124,54 +121,11 @@
       if (verificar != null) url.value = decodeURIComponent(verificar)
 
       const onSubmit = async (e) => {
-        e.preventDefault()
-        const feedurl = url.value.trim()
-        if (!feedurl || button.disabled) {
-          return false
-        }
-        button.setAttribute('disabled', '')
-        try {
-          console.log(feedurl)
-          const oembed = await loadFeed(feedurl)
-          const content = JSON.stringify(oembed, undefined, '  ')
-          console.log(content)
-          const externalID = hash(content)
-          console.log(externalID)
-          window.location.href = "https://trustos.telefonica.com/verificar-certificado/?verificar="+externalID;
-        } catch (err) {
-          console.error(err.message);
-        } finally {
-          button.removeAttribute('disabled')
-        }
+        window.location.href = "/extract?page="+document.getElementById('verificar1').value;
       }
-      form.addEventListener('submit', onSubmit)
     }
 
     window.onload = init
-
-    function hash(content) {
-        try {
-    				// First hash (WordArray hash)
-            const wordArray = CryptoJS.lib.WordArray.create(content);
-            const firstHash = CryptoJS.SHA256(wordArray);
-    				console.log("First hash:" + firstHash)
-            const firstHashHex = firstHash.toString(CryptoJS.enc.Hex)
-    				console.log("First hash Hex:" + firstHashHex)
-            return firstHashHex
-
-    				// Second hash (WordArray hash)
-            //const firstHashWordArray = CryptoJS.enc.Hex.parse(firstHashHex);
-            //const secondHash = CryptoJS.SHA256(firstHashWordArray);
-    				//const secondHashHex = secondHash.toString(CryptoJS.enc.Hex)
-    				//console.log("Double hash:" + secondHashHex)
-
-    				// Returns the double hash
-    				//return secondHashHex
-        } catch (err) {
-            console.log(`Error hashing the file content: ${err}`)
-            throw err
-        }
-    }
 
     function querySt(ji) {
         var hu = window.location.search.substring(1);
